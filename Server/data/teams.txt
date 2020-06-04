@@ -1,0 +1,9 @@
+[Team]
+code=0011
+qpeople=1
+qhours=1
+salary=1
+empday=1
+empmonth=1
+empyear=1
+[End]

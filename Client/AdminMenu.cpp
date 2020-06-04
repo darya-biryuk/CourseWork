@@ -18,16 +18,16 @@ void AdminMenu::run()
 	while (1)
 	{
 		system("cls");
-		cout << "ДОБРО ПОЖАЛОВАТЬ В РЕЖИМ АДМИНИСТРАТОРА\n";
-		cout << "1.Просмотр данных.\n";
-		cout << "2.Добавление данных.\n";
-		cout << "3.Удаление.\n";
-		cout << "4.Редактирование.\n";
-		cout << "5.Выход.\n";
+		cout << "Р”РћР‘Р Рћ РџРћР–РђР›РћР’РђРўР¬ Р’ Р Р•Р–РРњ РђР”РњРРќРРЎРўР РђРўРћР Рђ\n";
+		cout << "1.РџСЂРѕСЃРјРѕС‚СЂ РґР°РЅРЅС‹С….\n";
+		cout << "2.Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С….\n";
+		cout << "3.РЈРґР°Р»РµРЅРёРµ.\n";
+		cout << "4.Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ.\n";
+		cout << "5.Р’С‹С…РѕРґ.\n";
 		cout << ">>";
 		try {
 			cin >> ch;
-			if (ch > 4 || ch <= 0) throw first("\nБыл вызван обработчик класса first для проверки чисел.");
+			if (ch > 4 || ch <= 0) throw first("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° first РґР»СЏ РїСЂРѕРІРµСЂРєРё С‡РёСЃРµР».");
 		}
 		catch (first ob) {
 			cout << ob.what() << endl;
@@ -63,7 +63,7 @@ void AdminMenu::run()
 			system("cls");
 			return;
 		}
-		default: cout << "Неверный выбор. Повторите попытку.\n";
+		default: cout << "РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 			break;
 		}
 	}
@@ -74,17 +74,17 @@ void AdminMenu::print(vector<Car> cars, vector<Team> teams, vector<User> users)
 	while (1)
 	{
 		int sw;
-		cout << "1.Просмотр автомобилей.\n";
-		cout << "2.Просмотр бригад.\n";
-		cout << "3.Просмотр пользователей.\n";
-		cout << "4.Назад.\n";
+		cout << "1.РџСЂРѕСЃРјРѕС‚СЂ Р°РІС‚РѕРјРѕР±РёР»РµР№.\n";
+		cout << "2.РџСЂРѕСЃРјРѕС‚СЂ Р±СЂРёРіР°Рґ.\n";
+		cout << "3.РџСЂРѕСЃРјРѕС‚СЂ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.\n";
+		cout << "4.РќР°Р·Р°Рґ.\n";
 		cout << ">>";
 		try {
 			cin >> sw;
-			if (sw > 4 || sw <= 0) throw first("\nБыл вызван обработчик класса first для проверки чисел.");
+			if (sw > 4 || sw <= 0) throw first("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° first РґР»СЏ РїСЂРѕРІРµСЂРєРё С‡РёСЃРµР».");
 		}
 		catch (first ob) {
-			cout << "\nНет такого номера!" << ob.what() << endl;
+			cout << "\nРќРµС‚ С‚Р°РєРѕРіРѕ РЅРѕРјРµСЂР°!" << ob.what() << endl;
 		}
 		Systools::checkInt(sw);
 		switch (sw)
@@ -112,7 +112,7 @@ void AdminMenu::print(vector<Car> cars, vector<Team> teams, vector<User> users)
 			system("cls");
 			return;
 		}
-		default: cout << "Неверный выбор. Повторите попытку.\n";
+		default: cout << "РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 			break;
 		}
 	}
@@ -123,17 +123,17 @@ void AdminMenu::add()
 	while (1)
 	{
 		int sw;
-		cout << "1.Добавление автомобиля.\n";
-		cout << "2.Добавление бригады.\n";
-		cout << "3.Добавление пользователя.\n";
-		cout << "4.Назад.\n";
+		cout << "1.Р”РѕР±Р°РІР»РµРЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ.\n";
+		cout << "2.Р”РѕР±Р°РІР»РµРЅРёРµ Р±СЂРёРіР°РґС‹.\n";
+		cout << "3.Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.\n";
+		cout << "4.РќР°Р·Р°Рґ.\n";
 		cout << ">>";
 		try {
 			cin >> sw;
-			if (sw > 4 || sw <= 0) throw first("\nБыл вызван обработчик класса first для проверки чисел.");
+			if (sw > 4 || sw <= 0) throw first("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° first РґР»СЏ РїСЂРѕРІРµСЂРєРё С‡РёСЃРµР».");
 		}
 		catch (first ob) {
-			cout << "\nНет такого номера!" << ob.what() << endl;
+			cout << "\nРќРµС‚ С‚Р°РєРѕРіРѕ РЅРѕРјРµСЂР°!" << ob.what() << endl;
 		}
 		Systools::checkInt(sw);
 		switch (sw)
@@ -158,7 +158,7 @@ void AdminMenu::add()
 			system("cls");
 			return;
 		}
-		default: cout << "Неверный выбор. Повторите попытку.\n";
+		default: cout << "РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 			break;
 		}
 	}
@@ -177,47 +177,47 @@ void AdminMenu::addCarMenu()
 	int mark2;
 	int mark3;
 	memset(&newCar, 0, sizeof(newCar));
-	cout << "ВВОД ДАННЫХ:\n";
-	cout << "Код:\n";
+	cout << "Р’Р’РћР” Р”РђРќРќР«РҐ:\n";
+	cout << "РљРѕРґ:\n";
 	cin >> code;
 	strcpy(newCar.code, code.c_str());
-	cout << "Тип кузова (закрытый, открытый, грузо-пассажирский):\n";
+	cout << "РўРёРї РєСѓР·РѕРІР° (Р·Р°РєСЂС‹С‚С‹Р№, РѕС‚РєСЂС‹С‚С‹Р№, РіСЂСѓР·Рѕ-РїР°СЃСЃР°Р¶РёСЂСЃРєРёР№):\n";
 	cin >> bodyType;
 	try {
-		if (strcmp(bodyType.c_str(), "закрытый") != 0 && strcmp(bodyType.c_str(), "открытый") != 0 && strcmp(bodyType.c_str(), "грузо-пассажирский") != 0) {
+		if (strcmp(bodyType.c_str(), "Р·Р°РєСЂС‹С‚С‹Р№") != 0 && strcmp(bodyType.c_str(), "РѕС‚РєСЂС‹С‚С‹Р№") != 0 && strcmp(bodyType.c_str(), "РіСЂСѓР·Рѕ-РїР°СЃСЃР°Р¶РёСЂСЃРєРёР№") != 0) {
 			check++;
-			throw second("\nБыл вызван обработчик класса second для проверки текстовой информации.");
+			throw second("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° second РґР»СЏ РїСЂРѕРІРµСЂРєРё С‚РµРєСЃС‚РѕРІРѕР№ РёРЅС„РѕСЂРјР°С†РёРё.");
 		}
 	}
-	catch (second ob) { cout << "\nНеверный ввод!" << ob.what() << endl; return; }
+	catch (second ob) { cout << "\nРќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << ob.what() << endl; return; }
 	strcpy(newCar.bodyType, bodyType.c_str());
-	cout << "Количество дверей:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРІРµСЂРµР№:\n";
 	cin >> qOfDoors;
 	Systools::checkInt(qOfDoors);
 	newCar.qOfDoors = qOfDoors;
-	cout << "Количество мест:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РјРµСЃС‚:\n";
 	cin >> qOfSeats;
 	Systools::checkInt(qOfSeats);
 	newCar.qOfSeats = qOfSeats;
-	cout << "Объем багажа:\n";
+	cout << "РћР±СЉРµРј Р±Р°РіР°Р¶Р°:\n";
 	cin >> luggageVolume;
 	newCar.luggageVolume = luggageVolume;
-	cout << "Мощность двигателя:\n";
+	cout << "РњРѕС‰РЅРѕСЃС‚СЊ РґРІРёРіР°С‚РµР»СЏ:\n";
 	cin >> power;
 	newCar.power = power;
-	cout << "Эксперт 1:\n";
+	cout << "Р­РєСЃРїРµСЂС‚ 1:\n";
 	do
 	{
 		cin >> mark1;
 	} while (mark1 > 3 || mark1 < 1);
 	newCar.mark1 = mark1;
-	cout << "Эксперт 2:\n";
+	cout << "Р­РєСЃРїРµСЂС‚ 2:\n";
 	do
 	{
 		cin >> mark2;
 	} while (mark2 > 3 || mark2 < 1);
 	newCar.mark2 = mark2;
-	cout << "Эксперт 3:\n";
+	cout << "Р­РєСЃРїРµСЂС‚ 3:\n";
 	do
 	{
 		cin >> mark3;
@@ -239,27 +239,27 @@ void AdminMenu::addTeamMenu()
 	int qOfHours;
 	int salary;
 	int day, month, year;
-	cout << "ВВОД ДАННЫХ:\n";
-	cout << "Код:\n";
+	cout << "Р’Р’РћР” Р”РђРќРќР«РҐ:\n";
+	cout << "РљРѕРґ:\n";
 	cin >> code;
 	strcpy(newTeam.code, code.c_str());
-	cout << "Количество человек:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡РµР»РѕРІРµРє:\n";
 	cin >> qOfPeople;
 	newTeam.qOfPeople = qOfPeople;
-	cout << "Количество часов в неделю:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РІ РЅРµРґРµР»СЋ:\n";
 	cin >> qOfHours;
 	newTeam.qOfHours = qOfHours;
-	cout << "Заработная плата на бригаду:\n";
+	cout << "Р—Р°СЂР°Р±РѕС‚РЅР°СЏ РїР»Р°С‚Р° РЅР° Р±СЂРёРіР°РґСѓ:\n";
 	cin >> salary;
 	newTeam.salary = salary;
-	cout << "Дата приёма:\n";
-	cout << "день:\n";
+	cout << "Р”Р°С‚Р° РїСЂРёС‘РјР°:\n";
+	cout << "РґРµРЅСЊ:\n";
 	cin >> day;
 	newTeam.employmentDate.day = day;
-	cout << "месяц:\n";
+	cout << "РјРµСЃСЏС†:\n";
 	cin >> month;
 	newTeam.employmentDate.month = month;
-	cout << "год:\n";
+	cout << "РіРѕРґ:\n";
 	cin >> year;
 	newTeam.employmentDate.year = year;
 
@@ -273,10 +273,10 @@ void AdminMenu::addUserMenu()
 	User newUser;
 	string login, password;
 	memset(&newUser, 0, sizeof(newUser));
-	cout << "Введите login:\n";
+	cout << "Р’РІРµРґРёС‚Рµ login:\n";
 	cin >> login;
 	strcpy(newUser.login, login.c_str());
-	cout << "Введите пароль:\n";
+	cout << "Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ:\n";
 	cin >> password;
 	strcpy(newUser.password, password.c_str());
 
@@ -291,18 +291,18 @@ void AdminMenu::edit()
 		while (1)
 		{
 			system("cls");
-			cout << "РЕДАКТИРОВАНИЕ\nВыберите, что необходимо отредактировать:\n";
-			cout << "1.Автомобиль\n";
-			cout << "2.Бригада\n";
-			cout << "3.Пользователь\n";
-			cout << "4.НАЗАД\n";
+			cout << "Р Р•Р”РђРљРўРР РћР’РђРќРР•\nР’С‹Р±РµСЂРёС‚Рµ, С‡С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ:\n";
+			cout << "1.РђРІС‚РѕРјРѕР±РёР»СЊ\n";
+			cout << "2.Р‘СЂРёРіР°РґР°\n";
+			cout << "3.РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ\n";
+			cout << "4.РќРђР—РђР”\n";
 			cout << ">>";
 			try {
 				cin >> ch;
-				if (ch > 4 || ch <= 0) throw first("\nБыл вызван обработчик класса first для проверки чисел.");
+				if (ch > 4 || ch <= 0) throw first("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° first РґР»СЏ РїСЂРѕРІРµСЂРєРё С‡РёСЃРµР».");
 			}
 			catch (first ob) {
-				cout << "\nНет такого номера!" << ob.what() << endl;
+				cout << "\nРќРµС‚ С‚Р°РєРѕРіРѕ РЅРѕРјРµСЂР°!" << ob.what() << endl;
 			}
 			Systools::checkInt(ch);
 			switch (ch)
@@ -330,7 +330,7 @@ void AdminMenu::edit()
 				system("cls");
 				return;
 			}
-			default: cout << "Некорректный выбор. Повторите попытку\n";
+			default: cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ\n";
 				break;
 			}
 		}
@@ -339,7 +339,7 @@ void AdminMenu::edit()
 void AdminMenu::editCarMenu()
 {
 	int id;
-		cout << "Введите id автомобиля: ";
+		cout << "Р’РІРµРґРёС‚Рµ id Р°РІС‚РѕРјРѕР±РёР»СЏ: ";
 		cin >> id;
 		Systools::checkInt(id);
 		Car editCar;
@@ -351,7 +351,7 @@ void AdminMenu::editCarMenu()
 		memset(&editCar, 0, sizeof(editCar));
 		editCar.id = id;
 		do {
-			cout << "Код автомобиля: ";
+			cout << "РљРѕРґ Р°РІС‚РѕРјРѕР±РёР»СЏ: ";
 			cin >> code;
 			if (Systools::checkNoLetters(code))
 			{
@@ -359,51 +359,51 @@ void AdminMenu::editCarMenu()
 				break;
 			}
 			else
-				cout << "Некорректный ввод. Повторите попытку.\n";
+				cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 		} while (1);
 		do {
-			cout << "Тип кузова (закрытый, открытый, грузо-пассажирский):\n";
+			cout << "РўРёРї РєСѓР·РѕРІР° (Р·Р°РєСЂС‹С‚С‹Р№, РѕС‚РєСЂС‹С‚С‹Р№, РіСЂСѓР·Рѕ-РїР°СЃСЃР°Р¶РёСЂСЃРєРёР№):\n";
 			cin >> bodyType;
 			try {
-				if (strcmp(bodyType.c_str(), "закрытый") != 0 && strcmp(bodyType.c_str(), "открытый") != 0 && strcmp(bodyType.c_str(), "грузо-пассажирский") != 0) {
+				if (strcmp(bodyType.c_str(), "Р·Р°РєСЂС‹С‚С‹Р№") != 0 && strcmp(bodyType.c_str(), "РѕС‚РєСЂС‹С‚С‹Р№") != 0 && strcmp(bodyType.c_str(), "РіСЂСѓР·Рѕ-РїР°СЃСЃР°Р¶РёСЂСЃРєРёР№") != 0) {
 					check++;
-					throw second("\nБыл вызван обработчик класса second для проверки текстовой информации.");
+					throw second("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° second РґР»СЏ РїСЂРѕРІРµСЂРєРё С‚РµРєСЃС‚РѕРІРѕР№ РёРЅС„РѕСЂРјР°С†РёРё.");
 				}
 			}
-			catch (second ob) { cout << "\nНеверный ввод!" << ob.what() << endl; return; }
+			catch (second ob) { cout << "\nРќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << ob.what() << endl; return; }
 			if (Systools::checkNoNumbers(bodyType))
 			{
 				strcpy(editCar.bodyType, bodyType.c_str());
 				break;
 			}
 			else
-				cout << "Некорректный ввод. Повторите попытку.\n";
+				cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 		} while (1);
-		cout << "Количество дверей:\n";
+		cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРІРµСЂРµР№:\n";
 		cin >> qOfDoors;
 		Systools::checkInt(qOfDoors);
 		editCar.qOfDoors = qOfDoors;
-		cout << "Количество мест:\n";
+		cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РјРµСЃС‚:\n";
 		cin >> qOfSeats;
 		Systools::checkInt(qOfDoors);
 		editCar.qOfSeats = qOfSeats;
-		cout << "Объем багажа:\n";
+		cout << "РћР±СЉРµРј Р±Р°РіР°Р¶Р°:\n";
 		cin >> luggageVolume;
 		Systools::checkInt(luggageVolume);
 		editCar.luggageVolume = luggageVolume;
-		cout << "Мощность двигателя:\n";
+		cout << "РњРѕС‰РЅРѕСЃС‚СЊ РґРІРёРіР°С‚РµР»СЏ:\n";
 		cin >> power;
 		Systools::checkInt(power);
 		editCar.power = power;
-		cout << "Эксперт 1:\n";
+		cout << "Р­РєСЃРїРµСЂС‚ 1:\n";
 		cin >> mark1;
 		Systools::checkInt(mark1);
 		editCar.mark1 = mark1;
-		cout << "Эксперт 2:\n";
+		cout << "Р­РєСЃРїРµСЂС‚ 2:\n";
 		cin >> mark2;
 		Systools::checkInt(mark2);
 		editCar.mark2 = mark2;
-		cout << "Эксперт 3:\n";
+		cout << "Р­РєСЃРїРµСЂС‚ 3:\n";
 		cin >> mark3;
 		Systools::checkInt(mark3);
 		editCar.mark2 = mark2;
@@ -423,7 +423,7 @@ void AdminMenu::editTeamMenu()
 	int salary;
 	int day, month, year;
 	do {
-		cout << "Код бригады: ";
+		cout << "РљРѕРґ Р±СЂРёРіР°РґС‹: ";
 		cin >> code;
 		if (Systools::checkNoLetters(code))
 		{
@@ -431,30 +431,30 @@ void AdminMenu::editTeamMenu()
 			break;
 		}
 		else
-			cout << "Некорректный ввод. Повторите попытку.\n";
+			cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.\n";
 	} while (1);
-	cout << "Количество человек:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡РµР»РѕРІРµРє:\n";
 	cin >> qOfPeople;
 	Systools::checkInt(qOfPeople);
 	editTeam.qOfPeople = qOfPeople;
-	cout << "Количество часов в неделю:\n";
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РІ РЅРµРґРµР»СЋ:\n";
 	cin >> qOfHours;
 	Systools::checkInt(qOfHours);
 	editTeam.qOfHours = qOfHours;
-	cout << "Заработная плата на бригаду:\n";
+	cout << "Р—Р°СЂР°Р±РѕС‚РЅР°СЏ РїР»Р°С‚Р° РЅР° Р±СЂРёРіР°РґСѓ:\n";
 	cin >> salary;
 	Systools::checkInt(salary);
 	editTeam.salary = salary;
-	cout << "Дата приёма:\n";
-	cout << "день:\n";
+	cout << "Р”Р°С‚Р° РїСЂРёС‘РјР°:\n";
+	cout << "РґРµРЅСЊ:\n";
 	cin >> day;
 	Systools::checkInt(day);
 	editTeam.employmentDate.day = day;
-	cout << "месяц:\n";
+	cout << "РјРµСЃСЏС†:\n";
 	cin >> month;
 	Systools::checkInt(month);
 	editTeam.employmentDate.month = month;
-	cout << "год:\n";
+	cout << "РіРѕРґ:\n";
 	cin >> year;
 	Systools::checkInt(year);
 	editTeam.employmentDate.year = year;
@@ -470,13 +470,13 @@ void AdminMenu::editUserMenu()
 	string login, password;
 	int id;
 	memset(&editUser, 0, sizeof(editUser));
-	cout << "Введите id пользователя: ";
+	cout << "Р’РІРµРґРёС‚Рµ id РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 	cin >> id;
 	Systools::checkInt(id);
-	cout << "Введите login:\n";
+	cout << "Р’РІРµРґРёС‚Рµ login:\n";
 	cin >> login;
 	strcpy(editUser.login, login.c_str());
-	cout << "Введите пароль:\n";
+	cout << "Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ:\n";
 	cin >> password;
 	strcpy(editUser.password, password.c_str());
 
@@ -491,18 +491,18 @@ void AdminMenu::removeMenu()
 	while (1)
 	{
 		system("cls");
-		cout << "УДАЛЕНИЕ\nВыберите, что необходимо удалить:\n";
-		cout << "1.Автомобиль\n";
-		cout << "2.Бригада\n";
-		cout << "3.Пользователь\n";
-		cout << "4.Назад\n";
+		cout << "РЈР”РђР›Р•РќРР•\nР’С‹Р±РµСЂРёС‚Рµ, С‡С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ СѓРґР°Р»РёС‚СЊ:\n";
+		cout << "1.РђРІС‚РѕРјРѕР±РёР»СЊ\n";
+		cout << "2.Р‘СЂРёРіР°РґР°\n";
+		cout << "3.РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ\n";
+		cout << "4.РќР°Р·Р°Рґ\n";
 		cout << ">>";
 		try {
 			cin >> ch;
-			if (ch > 4 || ch <= 0) throw first("\nБыл вызван обработчик класса first для проверки чисел.");
+			if (ch > 4 || ch <= 0) throw first("\nР‘С‹Р» РІС‹Р·РІР°РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РєР»Р°СЃСЃР° first РґР»СЏ РїСЂРѕРІРµСЂРєРё С‡РёСЃРµР».");
 		}
 		catch (first ob) {
-			cout << "\nНет такого номера!" << ob.what() << endl;
+			cout << "\nРќРµС‚ С‚Р°РєРѕРіРѕ РЅРѕРјРµСЂР°!" << ob.what() << endl;
 		}
 		Systools::checkInt(ch);
 		switch (ch)
@@ -530,7 +530,7 @@ void AdminMenu::removeMenu()
 			system("cls");
 			return;
 		}
-		default: cout << "Некорректный выбор. Повторите попытку\n";
+		default: cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ\n";
 			break;
 		}
 	}
@@ -542,10 +542,10 @@ void AdminMenu::removeCarMenu()
 	while (1)
 	{
 		system("cls");
-		cout << "УДАЛЕНИЕ\nВыберите, что необходимо удалить:\n";
-		cout << "1.Удалить 1 автомобиль\n";
-		cout << "2.Удалить все автомобили\n";
-		cout << "3.Назад\n";
+		cout << "РЈР”РђР›Р•РќРР•\nР’С‹Р±РµСЂРёС‚Рµ, С‡С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ СѓРґР°Р»РёС‚СЊ:\n";
+		cout << "1.РЈРґР°Р»РёС‚СЊ 1 Р°РІС‚РѕРјРѕР±РёР»СЊ\n";
+		cout << "2.РЈРґР°Р»РёС‚СЊ РІСЃРµ Р°РІС‚РѕРјРѕР±РёР»Рё\n";
+		cout << "3.РќР°Р·Р°Рґ\n";
 		cout << ">>";
 		cin >> sw;
 		Systools::checkInt(sw);
@@ -572,7 +572,7 @@ void AdminMenu::removeCarMenu()
 			system("cls");
 			return;
 		}
-		default: cout << "Некорректный выбор. Повторите попытку\n";	break;
+		default: cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ\n";	break;
 		}
 	}
 }
@@ -582,7 +582,7 @@ void AdminMenu::removeCarById()
 	int id;
 	Car Car;
 	memset(&Car, 0, sizeof(Car));
-	cout << "Введите ID автомобиля" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ ID Р°РІС‚РѕРјРѕР±РёР»СЏ" << endl;
 	cin >> id;
 	Systools::checkInt(id);
 	Car.id = id;
@@ -597,10 +597,10 @@ void AdminMenu::removeTeamMenu()
 	while (1)
 	{
 		system("cls");
-		cout << "УДАЛЕНИЕ\nВыберите, что необходимо удалить:\n";
-		cout << "1.Удалить 1 бригаду\n";
-		cout << "2.Удалить все бригады\n";
-		cout << "3.Назад\n";
+		cout << "РЈР”РђР›Р•РќРР•\nР’С‹Р±РµСЂРёС‚Рµ, С‡С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ СѓРґР°Р»РёС‚СЊ:\n";
+		cout << "1.РЈРґР°Р»РёС‚СЊ 1 Р±СЂРёРіР°РґСѓ\n";
+		cout << "2.РЈРґР°Р»РёС‚СЊ РІСЃРµ Р±СЂРёРіР°РґС‹\n";
+		cout << "3.РќР°Р·Р°Рґ\n";
 		cout << ">>";
 		cin >> sw;
 		Systools::checkInt(sw);
@@ -627,7 +627,7 @@ void AdminMenu::removeTeamMenu()
 			system("cls");
 			return;
 		}
-		default: cout << "Некорректный выбор. Повторите попытку\n";	break;
+		default: cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ\n";	break;
 		}
 	}
 }
@@ -637,7 +637,7 @@ void AdminMenu::removeTeamByCode()
 	string code;
 	Team team;
 	memset(&team, 0, sizeof(team));
-	cout << "Введите код бригады" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕРґ Р±СЂРёРіР°РґС‹" << endl;
 	cin >> code;
 	strcpy(team.code, code.c_str());
 	Client::getInstance().sendMessage("REMOVEONETEAM", sizeof("REMOVEONETEAM"));
@@ -650,7 +650,7 @@ void AdminMenu::removeUserById()
 	int id;
 	User user;
 	memset(&user, 0, sizeof(user));
-	cout << "Введите ID пользователя" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" << endl;
 	cin >> id;
 	Systools::checkInt(id);
 	user.id = id;
